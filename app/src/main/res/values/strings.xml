@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Code Editor</string>
+
+    <string name="action_open_file">Open file</string>
+    <string name="action_open_folder">Open folder</string>
+    <string name="action_new_file">New file</string>
+    <string name="action_save">Save</string>
+    <string name="action_save_as">Save as…</string>
+    <string name="action_word_wrap">Word wrap</string>
+    <string name="action_about">About</string>
+
+    <string name="menu">Menu</string>
+    <string name="close_tab">Close tab</string>
+    <string name="explorer">Explorer</string>
+    <string name="no_folder_open">No folder open</string>
+    <string name="refresh">Refresh</string>
+
+    <string name="welcome_title">Code Editor</string>
+    <string name="welcome_subtitle">Open a file or folder to start editing</string>
+
+    <string name="untitled">untitled.txt</string>
+    <string name="saved">Saved</string>
+    <string name="save_failed">Save failed: %1$s</string>
+    <string name="open_failed">Could not open file: %1$s</string>
+
+    <string name="unsaved_title">Unsaved changes</string>
+    <string name="unsaved_message">\"%1$s\" has unsaved changes. Save before closing?</string>
+    <string name="save">Save</string>
+    <string name="discard">Discard</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="about_message">A lightweight, VS Code-style code editor built for Android phones.\n\nVersion %1$s\n\nFeatures:\n• Syntax highlighting\n• File explorer\n• Multiple tabs\n• Mobile symbol toolbar\n• Pinch to zoom</string>
+</resources>

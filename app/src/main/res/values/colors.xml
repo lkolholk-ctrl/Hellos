@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+
+    <!-- VS Code "Dark+" inspired palette -->
+    <color name="vscode_accent">#FF007ACC</color>
+    <color name="vscode_editor_bg">#FF1E1E1E</color>
+    <color name="vscode_sidebar_bg">#FF252526</color>
+    <color name="vscode_titlebar_bg">#FF323233</color>
+    <color name="vscode_tab_bg">#FF2D2D2D</color>
+    <color name="vscode_tab_active_bg">#FF1E1E1E</color>
+    <color name="vscode_text">#FFD4D4D4</color>
+    <color name="vscode_text_dim">#FF858585</color>
+    <color name="vscode_divider">#FF3C3C3C</color>
+    <color name="vscode_symbol_bg">#FF333333</color>
+</resources>
