@@ -27,6 +27,12 @@
                 <data android:mimeType="text/*" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/action_settings"
+            android:theme="@style/Theme.MobileCodeEditor" />
     </application>
 
 </manifest>

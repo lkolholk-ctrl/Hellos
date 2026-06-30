@@ -3,6 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_undo"
+        android:icon="@drawable/ic_undo"
+        android:title="@string/action_undo"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_redo"
+        android:icon="@drawable/ic_redo"
+        android:title="@string/action_redo"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_find"
+        android:icon="@drawable/ic_search"
+        android:title="@string/action_find"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_save"
         android:icon="@drawable/ic_save"
         android:title="@string/action_save"
@@ -29,9 +47,18 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_word_wrap"
-        android:checkable="true"
-        android:title="@string/action_word_wrap"
+        android:id="@+id/action_goto_line"
+        android:title="@string/action_goto_line"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_share"
+        android:title="@string/action_share"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
         app:showAsAction="never" />
 
     <item

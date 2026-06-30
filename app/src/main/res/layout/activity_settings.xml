@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vscode_editor_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/settingsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/vscode_titlebar_bg"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/action_settings"
+        app:titleTextAppearance="@style/ToolbarTitle" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <TextView style="@style/SettingsHeader" android:text="@string/settings_appearance" />
+
+            <LinearLayout android:id="@+id/rowTheme" style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_theme" />
+                    <TextView android:id="@+id/themeValue" style="@style/SettingsValue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/rowFontSize" style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_font_size" />
+                    <TextView android:id="@+id/fontSizeValue" style="@style/SettingsValue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/rowTabSize" style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_tab_size" />
+                    <TextView android:id="@+id/tabSizeValue" style="@style/SettingsValue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider" />
+
+            <TextView style="@style/SettingsHeader" android:text="@string/settings_editor" />
+
+            <LinearLayout style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_word_wrap" />
+                </LinearLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchWordWrap" style="@style/SettingsSwitch" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_line_numbers" />
+                </LinearLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchLineNumbers" style="@style/SettingsSwitch" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_whitespace" />
+                </LinearLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchWhitespace" style="@style/SettingsSwitch" />
+            </LinearLayout>
+
+            <View style="@style/SettingsDivider" />
+
+            <TextView style="@style/SettingsHeader" android:text="@string/settings_behavior" />
+
+            <LinearLayout style="@style/SettingsRow">
+                <LinearLayout style="@style/SettingsRowText">
+                    <TextView style="@style/SettingsTitle" android:text="@string/settings_session" />
+                </LinearLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchRestore" style="@style/SettingsSwitch" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

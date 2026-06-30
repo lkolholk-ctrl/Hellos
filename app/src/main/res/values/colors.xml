@@ -14,4 +14,7 @@
     <color name="vscode_text_dim">#FF858585</color>
     <color name="vscode_divider">#FF3C3C3C</color>
     <color name="vscode_symbol_bg">#FF333333</color>
+    <color name="vscode_statusbar_bg">#FF007ACC</color>
+    <color name="vscode_find_bg">#FF2D2D30</color>
+    <color name="vscode_input_bg">#FF3C3C3C</color>
 </resources>

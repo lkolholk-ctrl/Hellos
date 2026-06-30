@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
  * directories — the VS Code "Explorer" experience adapted for a narrow drawer.
  */
 class FileTreeAdapter(
-    private val onFileClick: (DocumentFile) -> Unit
+    private val onFileClick: (DocumentFile) -> Unit,
+    private val onItemLongClick: (DocumentFile) -> Unit
 ) : RecyclerView.Adapter<FileTreeAdapter.ViewHolder>() {
 
     private data class Row(val doc: DocumentFile, val depth: Int)
@@ -21,6 +22,8 @@ class FileTreeAdapter(
     private var root: DocumentFile? = null
     private val expanded = HashSet<String>()
     private val rows = ArrayList<Row>()
+
+    val rootDir: DocumentFile? get() = root
 
     fun setRoot(doc: DocumentFile?) {
         root = doc
@@ -92,6 +95,11 @@ class FileTreeAdapter(
             } else {
                 onFileClick(doc)
             }
+        }
+
+        holder.itemView.setOnLongClickListener {
+            onItemLongClick(doc)
+            true
         }
     }
 

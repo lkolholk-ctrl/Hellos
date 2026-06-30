@@ -106,12 +106,165 @@
             </LinearLayout>
         </FrameLayout>
 
+        <!-- Find & Replace panel -->
+        <LinearLayout
+            android:id="@+id/findPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/vscode_find_bg"
+            android:orientation="vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/findInput"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/vscode_input_bg"
+                    android:hint="@string/find_hint"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/vscode_text"
+                    android:textColorHint="@color/vscode_text_dim"
+                    android:textSize="14sp"
+                    android:autofillHints=""
+                    android:importantForAutofill="no" />
+
+                <TextView
+                    android:id="@+id/matchCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="2dp"
+                    android:minWidth="42dp"
+                    android:gravity="center"
+                    android:textColor="@color/vscode_text_dim"
+                    android:textSize="12sp" />
+
+                <ImageButton
+                    android:id="@+id/btnFindPrev"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/find_prev"
+                    android:src="@drawable/ic_arrow_up" />
+
+                <ImageButton
+                    android:id="@+id/btnFindNext"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/find_next"
+                    android:src="@drawable/ic_arrow_down" />
+
+                <ImageButton
+                    android:id="@+id/btnMatchCase"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/match_case"
+                    android:src="@drawable/ic_check" />
+
+                <ImageButton
+                    android:id="@+id/btnRegex"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/use_regex"
+                    android:src="@drawable/ic_code" />
+
+                <ImageButton
+                    android:id="@+id/btnCloseFind"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/close_find"
+                    android:src="@drawable/ic_close" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/replaceInput"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/vscode_input_bg"
+                    android:hint="@string/replace_hint"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:textColor="@color/vscode_text"
+                    android:textColorHint="@color/vscode_text_dim"
+                    android:textSize="14sp"
+                    android:autofillHints=""
+                    android:importantForAutofill="no" />
+
+                <ImageButton
+                    android:id="@+id/btnReplace"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/replace_one"
+                    android:src="@drawable/ic_replace" />
+
+                <ImageButton
+                    android:id="@+id/btnReplaceAll"
+                    style="@style/FindIconButton"
+                    android:contentDescription="@string/replace_all"
+                    android:src="@drawable/ic_redo" />
+            </LinearLayout>
+        </LinearLayout>
+
         <!-- Mobile symbol input bar -->
         <io.github.rosemoe.sora.widget.SymbolInputView
             android:id="@+id/symbolInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/vscode_symbol_bg" />
+
+        <!-- Status bar -->
+        <LinearLayout
+            android:id="@+id/statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:background="@color/vscode_statusbar_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/statusPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/statusLines"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/statusLang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
     </LinearLayout>
 
     <!-- ===== Navigation drawer: file explorer ===== -->
@@ -143,6 +296,24 @@
                 android:textColor="@color/vscode_text_dim"
                 android:textSize="12sp"
                 android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnDrawerNewFile"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/new_file"
+                android:src="@drawable/ic_new_file"
+                app:tint="@color/vscode_text" />
+
+            <ImageButton
+                android:id="@+id/btnDrawerNewFolder"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/new_folder"
+                android:src="@drawable/ic_new_folder"
+                app:tint="@color/vscode_text" />
 
             <ImageButton
                 android:id="@+id/btnDrawerOpenFolder"

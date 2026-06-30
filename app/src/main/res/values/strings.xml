@@ -6,7 +6,13 @@
     <string name="action_new_file">New file</string>
     <string name="action_save">Save</string>
     <string name="action_save_as">Save as…</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_redo">Redo</string>
+    <string name="action_find">Find &amp; Replace</string>
+    <string name="action_goto_line">Go to line…</string>
+    <string name="action_share">Share</string>
     <string name="action_word_wrap">Word wrap</string>
+    <string name="action_settings">Settings</string>
     <string name="action_about">About</string>
 
     <string name="menu">Menu</string>
@@ -14,6 +20,10 @@
     <string name="explorer">Explorer</string>
     <string name="no_folder_open">No folder open</string>
     <string name="refresh">Refresh</string>
+    <string name="new_file">New file</string>
+    <string name="new_folder">New folder</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
 
     <string name="welcome_title">Code Editor</string>
     <string name="welcome_subtitle">Open a file or folder to start editing</string>
@@ -28,6 +38,49 @@
     <string name="save">Save</string>
     <string name="discard">Discard</string>
     <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="create">Create</string>
 
-    <string name="about_message">A lightweight, VS Code-style code editor built for Android phones.\n\nVersion %1$s\n\nFeatures:\n• Syntax highlighting\n• File explorer\n• Multiple tabs\n• Mobile symbol toolbar\n• Pinch to zoom</string>
+    <!-- Find &amp; Replace -->
+    <string name="find_hint">Find</string>
+    <string name="replace_hint">Replace</string>
+    <string name="find_prev">Previous</string>
+    <string name="find_next">Next</string>
+    <string name="replace_one">Replace</string>
+    <string name="replace_all">Replace all</string>
+    <string name="match_case">Match case</string>
+    <string name="use_regex">Regex</string>
+    <string name="close_find">Close</string>
+    <string name="no_matches">No matches</string>
+    <string name="match_count">%1$d / %2$d</string>
+
+    <!-- Go to line -->
+    <string name="goto_line_title">Go to line</string>
+    <string name="goto_line_hint">Line number (1–%1$d)</string>
+
+    <!-- File ops -->
+    <string name="new_file_title">New file</string>
+    <string name="new_folder_title">New folder</string>
+    <string name="rename_title">Rename</string>
+    <string name="name_hint">Name</string>
+    <string name="delete_title">Delete</string>
+    <string name="delete_message">Delete \"%1$s\"?</string>
+    <string name="op_failed">Operation failed</string>
+
+    <!-- Settings -->
+    <string name="settings_editor">Editor</string>
+    <string name="settings_theme">Color theme</string>
+    <string name="settings_font_size">Font size</string>
+    <string name="settings_tab_size">Tab size</string>
+    <string name="settings_word_wrap">Word wrap</string>
+    <string name="settings_line_numbers">Line numbers</string>
+    <string name="settings_whitespace">Show whitespace</string>
+    <string name="settings_session">Restore last session on launch</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_behavior">Behavior</string>
+
+    <string name="status_position">Ln %1$d, Col %2$d</string>
+    <string name="status_lines">%1$d lines</string>
+
+    <string name="about_message">A lightweight, VS Code-style code editor built for Android phones.\n\nVersion %1$s\n\nFeatures:\n• Syntax highlighting\n• File explorer with file management\n• Multiple tabs\n• Find &amp; replace (with regex)\n• Go to line\n• Themes &amp; settings\n• Mobile symbol toolbar\n• Pinch to zoom\n• Session restore</string>
 </resources>
